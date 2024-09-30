@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <section class="products">
+
+        <div class="product-grid">
+    
+            <div class="product-card">
+                <img src="{{ product.image.url}}" alt="Product 3" class="product-img">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <p>${{ product.price }}</p>
+                <button>Add to Cart</button>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+{% endblock %}
+<!-- Products Section -->

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>About Us</h2>
+            <p>Find the best products at unbeatable prices!</p>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+    </section><br><br>
+
+    <div class="sectionFlex">
+        <div class="textNgrid">
+            <div class="textt">
+                <h1>More About Us</h3><br>
+                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p><br>
+            </div>
+
+            <div class="gridabout">
+                <div class="thegridss">
+                    <h3>Durability</h3>
+                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                </div>
+
+                <div class="thegridss">
+                    <h3>Extra Comfort</h3>
+                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                </div>
+
+                <div class="thegridss">
+                    <h3>Hassle-Free Returns</h3>
+                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                </div>
+
+                <div class="thegridss">
+                    <h3>Fast and Free Shipping</h3>
+                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div id="imgpositioning">
+            <img src="{% static './imgfolder/background.webp' %}" alt="" width="350px" height="450px" style="border-radius: 20px;">
+        </div>
+    </div> <br><br>
+    
+    <section class="ourteam">
+       <div class="innerdiv">
+            <h1>Our Team</h1>
+            <div class="teamgrid">
+                <div class="teamimg">
+                    <img src="{% static './imgfolder/person_1.jpg' %}" width="200px" alt="">
+                    <h3>Lawson Arnold</h3>
+                    <p>CEO, Founder, Atty. <br><br>
+                        Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    </p>
+                </div>
+                <div class="teamimg">
+                    <img src="{% static './imgfolder/person_2.jpg' %}" width="200px" alt="">
+                    <h3>Amandla Bush</h3>
+                    <p>CEO, Founder, Atty. <br><br>
+                        Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    </p>
+                    
+                </div>
+                <div class="teamimg">
+                    <img src="{% static './imgfolder/person_3.jpg' %}" width="200px" alt="">
+                    <h3>Kathryn Ryan</h3>
+                    <p>CEO, Founder, Atty. <br><br>
+                        Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    </p>
+                    
+                </div>
+                <div class="teamimg">
+                    <img src="{% static './imgfolder/person_4.jpg' %}"  width="200px"alt="">
+                    <h3>Patrik White</h3>
+                    <p>CEO, Founder, Atty. <br><br>
+                        Separated they live in. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section><br><br><br>
+    <section class="testimonials">
+        <div class="test">
+            <div class="testi">
+                <h1>Testimonials</h1>
+                <p>“Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.”</p>
+            </div>
+            <div>
+                <img src="{% static './imgfolder/person_2.jpg' %}" style="border-radius: 50%;" width="100px" alt="">
+                <p><b>Maria Jones</b></p>
+                <p>CEO, Co-Founder, <b>XYZ Inc.</b></p>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

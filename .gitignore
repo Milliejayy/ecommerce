@@ -1,0 +1,6 @@
+../venv
+ecomapp/__pycache__
+ecomapp/migrations
+ecomapp/__init__.py
+ecomfolder/__pycache__
+ecomfolder/__init__.py

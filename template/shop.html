@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My eCommerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    
+
+    <!-- Hero Section with Banner -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to our eShop</h2>
+            <p>We offer the best products at unbeatable prices!</p>
+            <a href="#" class="shop-now-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+           
+            {% for product in latest_product_uploaded %}
+           
+            <div class="product-card">
+                <img src="{{ product.image.url}}" alt="Product 3" class="product-img">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <p>${{ product.price }}</p>
+                <a class="" href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+                <a href="{% url 'detail' product.id %}">see details</a>
+            </div>
+            
+            {% endfor %}    
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+   
+</body>
+</html>
+{% endblock %}

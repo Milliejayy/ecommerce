@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h2>Alpha Luxury Furnitures</h2>
+        <p>Discover the best in modern and classic furniture designs to transform your space.</p>
+        <a href="#" class="shop-now-btn">Shop Now</a>
+    </div>
+</section>
+
+
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <h2>Best Sellers</h2>
+        <div class="product-grid">
+            {% for product in best_sellers %}
+            <div class="product-card">
+                <a href="{% url 'product_detail' product.id %}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p>${{ product.price }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+{% endblock %}

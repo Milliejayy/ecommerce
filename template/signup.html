@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="innerwidth">
+        <h1>Create an account</h1>
+        <form class="contactUsForm" method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            {{form.as_p}}
+            <input type="submit"/>
+        </form>
+    </div>
+{% endblock %}
+
+<html></html>
+<head>
+    <title>Create Furniture</title>
+</head>

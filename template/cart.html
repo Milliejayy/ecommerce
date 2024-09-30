@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Shopping Cart</h1>
+
+        <!-- Check if the cart has items -->
+        {% if cart.items %}
+        <p>Your cart is empty.</p>
+        
+        {% else %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through each item in the cart -->
+                {% for item in cart.items %}
+                <tr>
+                    <td>{{ item.product.name }}</td>
+                    <td>
+                        <form method="POST" action="{% url 'cart_update' item.product.id %}">
+                            {% csrf_token %}
+                            <input type="number" name="quantity" value="{{ item.quantity }}" min="1">
+                            <button type="submit">Update</button>
+                        </form>
+                    </td>
+                    <td>{{ item.product.price }}</td>
+                    <td>{{ item.total_price }}</td>
+                    <td>
+                        <form method="POST" action="{% url 'cart_remove' item.product.id %}">
+                            {% csrf_token %}
+                            <button type="submit">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Subtotal:</td>
+                    <td colspan="2">{{ cart.subtotal }}</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total:</td>
+                    <td colspan="2">{{ cart.total }}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+       
+        {% endif %}
+    </div>
+{% endblock %}
+</body>
+</html>

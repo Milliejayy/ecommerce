@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #f9a825;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../imgfolder/pexels-pixabay-276583.jpg') no-repeat center center/cover;
+    height: 400px;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.shop-now-btn {
+    background-color: #f9a825;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.shop-now-btn:hover {
+    background-color: #c79100;
+}
+
+/* Products Section */
+.products {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-img{
+    height: 30%;
+}
+.product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-card button {
+    background-color: #f9a825;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background-color: #c79100;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer .footer-links li {
+    margin: 0 10px;
+}
+
+footer .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer .footer-links li a:hover {
+    color: #f9a825;
+}
+
+/* about.html */
+.sectionFlex{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.teamimg img{
+    border-radius: 20px;
+}
+.gridabout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.ourteam{
+    width: 80%;
+    margin: auto;
+
+}
+.teamgrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.testimonials{
+    background-color: #3333333a;
+    text-align: center;
+}
+
+.test{
+    width: 80%;
+    margin: auto;
+}
+
+
+/* add to cart */
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+tbody td, tfoot td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+/* Center the "Actions" column */
+td form {
+    display: flex;
+    justify-content: center;
+}
+
